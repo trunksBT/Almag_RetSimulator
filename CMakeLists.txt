@@ -44,6 +44,12 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 link_directories(${Boost_LIBRARY_DIRS})
 add_definitions( -DBOOST_ALL_DYN_LINK)
 
+
+set(UTILS
+        ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
+        ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
+        )
+
 add_subdirectory(3rdparty/googletest/googlemock)
 add_subdirectory(test)
 add_subdirectory(src)
