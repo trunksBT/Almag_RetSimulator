@@ -1,4 +1,4 @@
-3rdparty/googletest
+3rdparty/*
 CMakeFiles/
 CMakeCache*
 Makefile
