@@ -1,0 +1,22 @@
+3rdparty/*
+CMakeFiles/
+CMakeCache*
+Makefile
+cmake_install.cmake
+*.swl
+*.swm
+*.swn
+*.swo
+*.swp
+*.cpp~
+*.cbp
+lib
+logs
+tags
+.idea
+
+# Binaries
+Almag_RetSimulator
+Almag_RetSimulator_UT
+Almag_RetSimulator_MT
+
