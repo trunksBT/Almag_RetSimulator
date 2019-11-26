@@ -1,5 +1,7 @@
 3rdparty/*
 CMakeFiles/
+build/
+
 CMakeCache*
 Makefile
 cmake_install.cmake
