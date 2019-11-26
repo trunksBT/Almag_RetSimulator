@@ -1,0 +1,8 @@
+@startuml
+(Receive From Driver) --> (Lex By Spaces)
+(Lex By Spaces) --> (Interpret)
+(Interpret) --> (Evaluate)
+(Evaluate) --> (Add command)
+(Add command) --> (Send)
+(Send) --> (Receive From Driver)
+@enduml
