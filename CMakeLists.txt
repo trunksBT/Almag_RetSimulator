@@ -48,16 +48,16 @@ add_definitions( -DBOOST_ALL_DYN_LINK)
 include_directories(${PROJECT_SOURCE_DIR}/externalLibraries)
 
 set(DATABASE
-        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.hpp
-        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.cpp
-        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.cpp
-        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.hpp
-        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
 )
 
 set(UTILS
-        ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
-        ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
+    ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
+    ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
 )
 
 set(USER_INTERFACE
