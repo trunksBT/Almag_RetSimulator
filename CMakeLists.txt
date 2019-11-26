@@ -60,6 +60,24 @@ set(UTILS
         ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
 )
 
+set(USER_INTERFACE
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/CDatabaseCommand.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/CDatabaseCommand.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/Brokers/Broker_IOPaths.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/Brokers/Broker_IOPaths.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/AlmagCommandValidationManager.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/AlmagCommandValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/DummyScanValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/DummyScanValidationStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/ICommandValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/ICommandValidationStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.hpp
+)
+
 add_subdirectory(3rdparty/googletest/googlemock)
 add_subdirectory(test)
 add_subdirectory(src)
+
