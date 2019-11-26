@@ -1,0 +1,32 @@
+@startuml
+
+actor User
+participant RetSimulator
+participant RetDriver
+database DB
+
+note over RetSimulator, RetDriver
+DUMMY_SCAN_FRAME = "7e ff bf 81 f0 8 1 2 33 33 3 2 ff ff 13 37 7e"
+end note
+
+group SetRetCommunicationAddress
+
+User -> RetSimulator : put /IOPaths_1 /Ret_1
+RetSimulator -> DB : create /IOPaths_1{bufferToSend=/Ret_1}
+
+note over RetSimulator
+Start listenning on the ICP:/Ret_1
+end note
+
+end group
+
+== L1 Physical layer ==
+
+
+loop 6 times every 300ms
+    RetDriver -> RetSimulator : DummyScan /Ret_1
+end
+
+== L2 Data link layer ==
+
+@enduml
