@@ -1,9 +1,6 @@
 [submodule "3rdparty/zeromq"]
 	path = 3rdparty/zeromq
 	url = https://github.com/zeromq/cppzmq.git
-[submodule "3rdparty/googletest"]
-	path = 3rdparty/googletest
-	url = https://github.com/google/googletest.git
 [submodule "externalLibraries/Database"]
 	path = externalLibraries/Database
 	url = git@github.com:trunksBT/Almag_Database.git
