@@ -44,11 +44,21 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 link_directories(${Boost_LIBRARY_DIRS})
 add_definitions( -DBOOST_ALL_DYN_LINK)
 
+# External libraries
+include_directories(${PROJECT_SOURCE_DIR}/externalLibraries)
+
+set(DATABASE
+        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.hpp
+        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.cpp
+        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.cpp
+        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.hpp
+        ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
+)
 
 set(UTILS
         ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
         ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
-        )
+)
 
 add_subdirectory(3rdparty/googletest/googlemock)
 add_subdirectory(test)
