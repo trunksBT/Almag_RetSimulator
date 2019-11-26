@@ -1,4 +1,3 @@
-3rdparty/*
 CMakeFiles/
 CMakeCache*
 Makefile
@@ -9,7 +8,6 @@ cmake_install.cmake
 *.swo
 *.swp
 *.cpp~
-*.cbp
 lib
 logs
 tags
