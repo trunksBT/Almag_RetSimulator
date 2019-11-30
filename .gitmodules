@@ -10,3 +10,6 @@
 [submodule "externalLibraries/UserInterface"]
 	path = externalLibraries/UserInterface
 	url = git@github.com:trunksBT/Almag_UserInterface.git
+[submodule "externalLibraries/Utils"]
+	path = externalLibraries/Utils
+	url = git@github.com:trunksBT/Almag_Utils.git
