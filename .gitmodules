@@ -13,3 +13,6 @@
 [submodule "externalLibraries/Utils"]
 	path = externalLibraries/Utils
 	url = git@github.com:trunksBT/Almag_Utils.git
+[submodule "docs/UML_SequenceDiagrams"]
+	path = docs/UML_SequenceDiagrams
+	url = git@github.com:trunksBT/Almag_RetDriver_Device_Simulator_Docs.git
