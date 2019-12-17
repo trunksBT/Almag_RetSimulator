@@ -97,12 +97,6 @@ set(EXTERNAL_LIBRARIES_USER_INTERFACE
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/CDatabaseCommand.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/Brokers/Broker_IOPaths.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/Brokers/Broker_IOPaths.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/DummyScanValidationStrategy.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/DummyScanValidationStrategy.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/ICommandValidationStrategy.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/ICommandValidationStrategy.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.hpp
 )
 
 set(EXTERNAL_LIBRARIES_UTILS
@@ -145,6 +139,17 @@ set(EXTERNAL_LIBRARIES_CONTROLLER
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/LinkEstablishment.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/ThreeGPPReleaseID.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/ThreeGPPReleaseID.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/AlmagCommandValidationManager.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/AlmagCommandValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/DatabaseCommandValidationManager.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/DatabaseCommandValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/DummyScanValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/DummyScanValidationStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/ICmdValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/ICommandValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/ICommandValidationStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/NullValidationStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/CmdValidationRules/NullValidationStrategy.hpp
 )
 
 add_subdirectory(3rdparty/googletest/googlemock)

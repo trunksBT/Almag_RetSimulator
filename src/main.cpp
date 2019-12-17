@@ -5,11 +5,11 @@
 
 #include <Utils/Logger.hpp>
 
-//#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
+#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
 #include <Database/DatabaseConstraints.hpp>
 #include <PluginSpecifics/RetCommandFactory.hpp>
-//#include <PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.hpp>
-#include <UserInterface/CtrlCommandsValidators/DatabaseCommandValidationManager.hpp>
+#include <Controller/CmdValidationRules/AlmagCommandValidationManager.hpp>
+#include <Controller/CmdValidationRules/DatabaseCommandValidationManager.hpp>
 
 #include <Utils/UserCommandParser.hpp>
 
@@ -28,17 +28,17 @@ int main()
    ICommandFactoryPtr commandFactory = std::make_shared<RetCommandFactory>(hdlcCommunicators);
    AlmagControllerPtr ctrl = std::make_shared<AlmagController>(db, commandFactory);
 
-//   CMenu ui{"AlmagRetUI", "_", db, ctrl,
-////            std::make_shared<AlmagCommandValidationManager>(db),
-////            std::make_unique<DatabaseCommandValidationManager>(db)
-//   };
-//
-//   ui.setAlmagCommandsConstraints({
-//      constraints::ret::values.begin(), constraints::ret::values.end()});
-//   ui.setDatabaseCommandsConstraints({
-//      constraints::database::values.begin(), constraints::database::values.end()});
+   CMenu ui{"AlmagRetUI", "_", db, ctrl,
+            std::make_shared<AlmagCommandValidationManager>(db),
+            std::make_unique<DatabaseCommandValidationManager>(db)
+   };
 
-//   ui.run({});
+   ui.setAlmagCommandsConstraints({
+      constraints::almag::values.begin(), constraints::almag::values.end()});
+   ui.setDatabaseCommandsConstraints({
+      constraints::database::values.begin(), constraints::database::values.end()});
+
+   ui.run({});
 
    LOG(trace) << "END";
    return 0;
