@@ -54,8 +54,8 @@ set(PLUGIN_SPECIFICS
 #    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.hpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.cpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.hpp
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCReqFrameBodyFactory.cpp
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCReqFrameBodyFactory.hpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCRespFrameBodyFactory.cpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCRespFrameBodyFactory.hpp
 )
 
 set(EXTERNAL_LIBRARIES_HDLC
@@ -71,8 +71,6 @@ set(EXTERNAL_LIBRARIES_HDLC
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/MessagesHelpers.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBodyInterpreter.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBodyInterpreter.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCRespFrameBodyFactory.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCRespFrameBodyFactory.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameI.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameI.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameU.cpp

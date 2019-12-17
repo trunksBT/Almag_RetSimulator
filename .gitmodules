@@ -22,3 +22,6 @@
 [submodule "externalLibraries/HDLC"]
 	path = externalLibraries/HDLC
 	url = git@github.com:trunksBT/Almag_HDLC.git
+[submodule "externalLibraries/TestUtils"]
+	path = externalLibraries/TestUtils
+	url = git@github.com:trunksBT/Almag_TestUtils.git

@@ -8,7 +8,7 @@
 #include <Controller/Commands/LinkEstablishment.hpp>
 #include <Controller/Commands/ThreeGPPReleaseID.hpp>
 #include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
-//#include <PluginSpecifics/HDLCReqFrameBodyFactory.hpp>
+#include <PluginSpecifics/HDLCRespFrameBodyFactory.hpp>
 #include <Utils/Logger.hpp>
 
 using namespace constraints::almag;
@@ -38,42 +38,42 @@ ICommandPtr RetCommandFactory::interpretAndCreateCommand(std::vector<std::string
 {
    const auto& commandName = validatedInput[IDX_OF_COMMAND_OR_ACTION_NAME];
 
-//   if (L2::DEVICE_SCAN == commandName)
-//   {
-//      return std::make_shared<DeviceScan>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L2::ADDRESS_ASSIGNMENT == commandName)
-//   {
-//      return std::make_shared<AddressAssignment>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L2::LINK_ESTABLISHMENT == commandName)
-//   {
-//      return std::make_shared<LinkEstablishment>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L2::HDLC_PARAMETERS == commandName)
-//   {
-//      return std::make_shared<HDLCParameters>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L2::THREEGPP_RELEASE_ID == commandName)
-//   {
-//      return std::make_shared<ThreeGPPReleaseID>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L2::AISG_PROTOCOL_VERSION == commandName)
-//   {
-//      return std::make_shared<AISGProtocolVersion>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else if (L7::CALIBRATE == commandName)
-//   {
-//      return std::make_shared<Calibrate>(std::make_shared<HDLCReqFrameBodyFactory>(),
-//               hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
-//   }
-//   else
+   if (L2::DEVICE_SCAN == commandName)
+   {
+      return std::make_shared<DeviceScan>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L2::ADDRESS_ASSIGNMENT == commandName)
+   {
+      return std::make_shared<AddressAssignment>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L2::LINK_ESTABLISHMENT == commandName)
+   {
+      return std::make_shared<LinkEstablishment>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L2::HDLC_PARAMETERS == commandName)
+   {
+      return std::make_shared<HDLCParameters>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L2::THREEGPP_RELEASE_ID == commandName)
+   {
+      return std::make_shared<ThreeGPPReleaseID>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L2::AISG_PROTOCOL_VERSION == commandName)
+   {
+      return std::make_shared<AISGProtocolVersion>(std::make_shared<HDLCRespFrameBodyFactory>(),
+              hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else if (L7::CALIBRATE == commandName)
+   {
+      return std::make_shared<Calibrate>(std::make_shared<HDLCRespFrameBodyFactory>(),
+               hdlcCommunicators_.at(IDX_OF_REQUEST_RESPONSE_COMMUNICATOR), validatedInput);
+   }
+   else
    {
       LOG(warning) << "Unknown command " << commandName;
       return {};
