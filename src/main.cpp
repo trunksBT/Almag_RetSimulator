@@ -5,8 +5,8 @@
 
 #include <Utils/Logger.hpp>
 
-#include <PluginSpecifics/CmdConstraints/RetConstraints.hpp>
-//#include <PluginSpecifics/CmdConstraints/DatabaseConstraints.hpp>
+//#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
+#include <Database/DatabaseConstraints.hpp>
 #include <PluginSpecifics/RetCommandFactory.hpp>
 //#include <PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.hpp>
 #include <UserInterface/CtrlCommandsValidators/DatabaseCommandValidationManager.hpp>
@@ -33,8 +33,10 @@ int main()
 ////            std::make_unique<DatabaseCommandValidationManager>(db)
 //   };
 //
-   ui.setAlmagCommandsConstraints({
-      constraints::ret::values.begin(), constraints::ret::values.end()});
+//   ui.setAlmagCommandsConstraints({
+//      constraints::ret::values.begin(), constraints::ret::values.end()});
+//   ui.setDatabaseCommandsConstraints({
+//      constraints::database::values.begin(), constraints::database::values.end()});
 
 //   ui.run({});
 

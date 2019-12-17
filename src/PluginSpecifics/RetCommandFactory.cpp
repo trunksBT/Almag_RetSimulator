@@ -7,11 +7,11 @@
 #include <Controller/Commands/HDLCParameters.hpp>
 #include <Controller/Commands/LinkEstablishment.hpp>
 #include <Controller/Commands/ThreeGPPReleaseID.hpp>
-#include <PluginSpecifics/CmdConstraints/RetConstraints.hpp>
+#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
 //#include <PluginSpecifics/HDLCReqFrameBodyFactory.hpp>
 #include <Utils/Logger.hpp>
 
-using namespace constraints::ret;
+using namespace constraints::almag;
 
 namespace
 {

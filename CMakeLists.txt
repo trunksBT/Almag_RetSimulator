@@ -87,6 +87,7 @@ set(EXTERNAL_LIBRARIES_DATABASE
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Database/DatabaseConstraints.hpp
 )
 
 set(EXTERNAL_LIBRARIES_USER_INTERFACE
@@ -118,7 +119,7 @@ set(EXTERNAL_LIBRARIES_UTILS
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Logger.hpp
 )
 
-set(EXTERNAL_LIBRARIES_COMMAND_PATTERN
+set(EXTERNAL_LIBRARIES_CONTROLLER
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagControllerNull.cpp
@@ -130,8 +131,6 @@ set(EXTERNAL_LIBRARIES_COMMAND_PATTERN
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/AddressAssignment.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/Calibrate.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/Calibrate.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DummyScan.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DummyScan.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DeviceScan.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DeviceScan.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/HDLCParameters.cpp

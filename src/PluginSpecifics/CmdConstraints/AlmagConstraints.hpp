@@ -5,7 +5,7 @@
 
 namespace constraints
 {
-namespace ret
+namespace almag
 {
 namespace L2
 {
