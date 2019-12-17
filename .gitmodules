@@ -16,3 +16,6 @@
 [submodule "docs/UML_SequenceDiagrams"]
 	path = docs/UML_SequenceDiagrams
 	url = git@github.com:trunksBT/Almag_RetDriver_Device_Simulator_Docs.git
+[submodule "externalLibraries/Controller"]
+	path = externalLibraries/Controller
+	url = git@github.com:trunksBT/Almag_Controller.git
