@@ -19,3 +19,6 @@
 [submodule "externalLibraries/Controller"]
 	path = externalLibraries/Controller
 	url = git@github.com:trunksBT/Almag_Controller.git
+[submodule "externalLibraries/HDLC"]
+	path = externalLibraries/HDLC
+	url = git@github.com:trunksBT/Almag_HDLC.git
