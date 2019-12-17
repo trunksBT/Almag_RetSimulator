@@ -55,11 +55,6 @@ set(EXTERNAL_LIBRARIES_DATABASE
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
 )
 
-set(EXTERNAL_LIBRARIES_UTILS
-    ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
-    ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
-)
-
 set(EXTERNAL_LIBRARIES_USER_INTERFACE
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.hpp
@@ -73,6 +68,20 @@ set(EXTERNAL_LIBRARIES_USER_INTERFACE
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/ICommandValidationStrategy.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.hpp
+)
+
+set(EXTERNAL_LIBRARIES_UTILS
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Utils.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Utils.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/TypeAliases.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Functions.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Functions.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/PrintUtils.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/PrintUtils.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/UserCommandParser.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/UserCommandParser.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Logger.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Logger.hpp
 )
 
 set(EXTERNAL_LIBRARIES_COMMAND_PATTERN
