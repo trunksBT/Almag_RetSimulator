@@ -47,6 +47,40 @@ add_definitions( -DBOOST_ALL_DYN_LINK)
 # External libraries
 include_directories(${PROJECT_SOURCE_DIR}/externalLibraries)
 
+set(PLUGIN_SPECIFICS
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/CmdConstraints/AlmagConstraints.hpp
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/CmdConstraints/DatabaseConstraints.hpp
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.cpp
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.cpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.hpp
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCReqFrameBodyFactory.cpp
+#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCReqFrameBodyFactory.hpp
+)
+
+set(EXTERNAL_LIBRARIES_HDLC
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCCommunicator.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCCommunicator.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrame.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrame.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCParametersValues.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCParametersValues.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBody.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBody.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/IHDLCCommunicator.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/MessagesHelpers.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBodyInterpreter.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCFrameBodyInterpreter.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCRespFrameBodyFactory.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/HDLCRespFrameBodyFactory.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameI.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameI.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameU.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameU.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameXID.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/HDLC/FrameTypes/FrameXID.hpp
+)
+
 set(EXTERNAL_LIBRARIES_DATABASE
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.cpp

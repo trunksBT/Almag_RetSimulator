@@ -2,8 +2,11 @@ message(status "Almag_RetSimulator srcCMakeLists")
 
 add_executable(${PROJECT_NAME}
     ${PROJECT_SOURCE_DIR}/src/main.cpp
-    ${EXTERNAL_LIBRARIES_UTILS}
+    ${PLUGIN_SPECIFICS}
+    ${EXTERNAL_LIBRARIES_DATABASE}
+    ${EXTERNAL_LIBRARIES_HDLC}
     ${EXTERNAL_LIBRARIES_USER_INTERFACE}
+    ${EXTERNAL_LIBRARIES_UTILS}
 )
 
 target_link_libraries(${PROJECT_NAME}
