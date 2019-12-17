@@ -47,7 +47,7 @@ add_definitions( -DBOOST_ALL_DYN_LINK)
 # External libraries
 include_directories(${PROJECT_SOURCE_DIR}/externalLibraries)
 
-set(DATABASE
+set(EXTERNAL_LIBRARIES_DATABASE
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Objects/IOPaths.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Database.cpp
@@ -55,12 +55,12 @@ set(DATABASE
     ${PROJECT_SOURCE_DIR}/externalLibraries/Database/Utils/KeyWithValue.hpp
 )
 
-set(UTILS
+set(EXTERNAL_LIBRARIES_UTILS
     ${PROJECT_SOURCE_DIR}/src/Utils/Logger.cpp
     ${PROJECT_SOURCE_DIR}/src/Utils/Logger.hpp
 )
 
-set(USER_INTERFACE
+set(EXTERNAL_LIBRARIES_USER_INTERFACE
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CMenu.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/Database/CDatabaseCommand.cpp
@@ -75,7 +75,36 @@ set(USER_INTERFACE
     ${PROJECT_SOURCE_DIR}/externalLibraries/UserInterface/CtrlCommandsValidators/NullValidationStrategy.hpp
 )
 
+set(EXTERNAL_LIBRARIES_COMMAND_PATTERN
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagControllerNull.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagControllerNull.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/IController.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/AISGProtocolVersion.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/AISGProtocolVersion.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/AddressAssignment.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/AddressAssignment.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/Calibrate.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/Calibrate.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DummyScan.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DummyScan.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DeviceScan.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/DeviceScan.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/HDLCParameters.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/HDLCParameters.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/ICommand.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/ICommand.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/HDLCCommand.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/HDLCCommand.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/IHDLCFrameBodyFactory.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/ICommandFactory.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/LinkEstablishment.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/LinkEstablishment.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/ThreeGPPReleaseID.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/Commands/ThreeGPPReleaseID.hpp
+)
+
 add_subdirectory(3rdparty/googletest/googlemock)
 add_subdirectory(test)
 add_subdirectory(src)
-
