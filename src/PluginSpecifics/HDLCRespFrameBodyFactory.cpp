@@ -49,11 +49,7 @@ HDLCFrameBodyPtr HDLCRespFrameBodyFactory::get_FrameXID_DeviceScan() const
            .addParameters(HDLCParametersValues::build(
                    XID_PARAMS_ID::VENDOR_CODE,
                    0x02,
-                   Hexes{{ 0x4E, 0x4B }}))
-           .addParameters(HDLCParametersValues::build(
-                   XID_PARAMS_ID::AISG_PROTOCOL_VERSION,
-                   0x01,
-                   Hexes{{ 0x02 }}));
+                   Hexes{{ 0x4E, 0x4B }}));
    return std::make_shared<FrameXID>(retFrame);
 }
 
