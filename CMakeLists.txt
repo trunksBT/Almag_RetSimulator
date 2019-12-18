@@ -111,6 +111,24 @@ set(EXTERNAL_LIBRARIES_UTILS
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Logger.hpp
 )
 
+set(EXTERNAL_LIBRARIES_TESTUTILS
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/Hardcodes.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/ObjectTypes.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/StructsForParametrizedTests.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/UniqueKeys.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HexesUtils.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HexesUtils.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/MatcherUtils.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/MatcherUtils.hpp
+
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZeroMqUtils.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZeroMqUtils.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqCommunicator.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqCommunicator.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespCommunicator.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespCommunicator.hpp
+)
+
 set(EXTERNAL_LIBRARIES_CONTROLLER
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.hpp
