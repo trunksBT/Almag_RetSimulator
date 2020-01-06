@@ -144,6 +144,14 @@ set(EXTERNAL_LIBRARIES_TESTUTILS_COMMUNICATORS
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZeroMqUtils.hpp
 )
 
+set(EXTERNAL_LIBRARIES_TESTUTILS_HDLC_FRAMESFACTORIES
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/FrameStrFactory.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/SRetHDLCReqFrameBodyStrFactory.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/SRetHDLCReqFrameBodyStrFactory.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/SRetHDLCRespFrameBodyStrFactory.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/SRetHDLCRespFrameBodyStrFactory.hpp
+)
+
 set(EXTERNAL_LIBRARIES_CONTROLLER
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Controller/AlmagController.hpp

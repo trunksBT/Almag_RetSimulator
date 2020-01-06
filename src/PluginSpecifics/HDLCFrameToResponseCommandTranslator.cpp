@@ -46,7 +46,7 @@ std::string HDLCFrameToResponseCommandTranslator::translate(const HDLCFrameBodyP
    }
    else if (receivedStrings == knownResponseMessages_->get_FrameXID_AISGProtocolVersion())
    {
-      return L2::ADDRESS_ASSIGNMENT;
+      return L2::AISG_PROTOCOL_VERSION;
    }
    else if (receivedStrings == knownResponseMessages_->get_FrameI_Calibrate())
    {

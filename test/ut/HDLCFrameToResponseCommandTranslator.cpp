@@ -37,32 +37,32 @@ INSTANTIATE_TEST_CASE_P(HDLCFrameToResponseCommandTranslatorTests,
         HDLCFrameToResponseCommandTranslatorTests,
         ::testing::Values(
         ReceivedFrameStr_RespCommandStr{
+            retDeviceStrFactory->get_FrameXID_DeviceScan(),
+            L2::DEVICE_SCAN
+        },
+        ReceivedFrameStr_RespCommandStr{
             retDeviceStrFactory->get_FrameXID_AddressAssignment(),
             L2::ADDRESS_ASSIGNMENT
         },
         ReceivedFrameStr_RespCommandStr{
-           retDeviceStrFactory->get_FrameXID_DeviceScan(),
-           L2::DEVICE_SCAN
+            retDeviceStrFactory->get_FrameU_LinkEstablishment(),
+            L2::LINK_ESTABLISHMENT
+        },
+        ReceivedFrameStr_RespCommandStr{
+            retDeviceStrFactory->get_FrameXID_HDLCParameters(),
+            L2::HDLC_PARAMETERS
+        },
+        ReceivedFrameStr_RespCommandStr{
+            retDeviceStrFactory->get_FrameXID_3GPPReleaseId(),
+            L2::THREEGPP_RELEASE_ID
+        },
+        ReceivedFrameStr_RespCommandStr{
+            retDeviceStrFactory->get_FrameXID_AISGProtocolVersion(),
+            L2::AISG_PROTOCOL_VERSION
+        },
+        ReceivedFrameStr_RespCommandStr{
+            retDeviceStrFactory->get_FrameI_Calibrate(),
+            L7::CALIBRATE
         }
-//        ReceivedFrameStr_RespCommandStr{
-//            toString(hdlcFrameBodyFactory->get_FrameXID_3GPPReleaseId()->build()),
-//            retDeviceStrFactory->get_FrameXID_3GPPReleaseId()
-//        },
-//        ReceivedFrameStr_RespCommandStr{
-//            toString(hdlcFrameBodyFactory->get_FrameXID_AISGProtocolVersion()->build()),
-//            retDeviceStrFactory->get_FrameXID_AISGProtocolVersion()
-//        },
-//        ReceivedFrameStr_RespCommandStr{
-//                toString(hdlcFrameBodyFactory->get_FrameXID_HDLCParameters()->build()),
-//                retDeviceStrFactory->get_FrameXID_HDLCParameters()
-//        },
-//        ReceivedFrameStr_RespCommandStr{
-//            toString(hdlcFrameBodyFactory->get_FrameU_LinkEstablishment()->build()),
-//            retDeviceStrFactory->get_FrameU_LinkEstablishment()
-//        },
-//        ReceivedFrameStr_RespCommandStr{
-//            toString(hdlcFrameBodyFactory->get_FrameI_Calibrate()->build()),
-//            retDeviceStrFactory->get_FrameI_Calibrate()
-//        }
     )
 );

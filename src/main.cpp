@@ -1,16 +1,18 @@
 #include <Controller/AlmagController.hpp>
 #include <Database/Database.hpp>
+#include <Database/DatabaseConstraints.hpp>
 #include <HDLC/HDLCCommunicator.hpp>
+
 #include <UserInterface/CMenu.hpp>
 
-#include <Utils/Logger.hpp>
-
 #include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
-#include <Database/DatabaseConstraints.hpp>
 #include <PluginSpecifics/RetCommandFactory.hpp>
+#include <PluginSpecifics/HDLCFrameToResponseCommandTranslator.hpp>
+
 #include <Controller/CmdValidationRules/AlmagCommandValidationManager.hpp>
 #include <Controller/CmdValidationRules/DatabaseCommandValidationManager.hpp>
 
+#include <Utils/Logger.hpp>
 #include <Utils/UserCommandParser.hpp>
 #include <TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespCommunicator.hpp>
 
@@ -41,10 +43,13 @@ int main()
    ui.setDatabaseCommandsConstraints({
        constraints::database::values.begin(), constraints::database::values.end()});
 
-   const auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive("5555");  // release mode
+   HDLCFrameToResponseCommandTranslator frameTranslator{};
 
+   const std::string hardcodedPort = "5555";
+   auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive(hardcodedPort);  // release mode
+   auto commandToExecute = frameTranslator.translate(receivedHdlcFrame->getFrameBody());
    //  here for command interpreter
-//   ui.run({HdlcFrameToResponseCommandTranslator(receivedHdlcFrame).execute()});
+   ui.runPredefinedCommands({{commandToExecute, hardcodedPort}});
 
    LOG(trace) << "END";
    return 0;
