@@ -19,8 +19,8 @@ using namespace hardcodes::IOPaths;
 namespace mt
 {
 class AlmagControllerShouldPar:
-        public BaseFixtureWithDBAndHDLC,
-        public ::testing::WithParamInterface<CommandsToExpectedFrame>
+   public BaseFixtureWithDBAndHDLC,
+   public ::testing::WithParamInterface<CommandsToExpectedFrame>
 {
 protected:
    AlmagControllerShouldPar()

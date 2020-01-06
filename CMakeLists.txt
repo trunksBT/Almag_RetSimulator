@@ -56,6 +56,8 @@ set(PLUGIN_SPECIFICS
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.hpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCRespFrameBodyFactory.cpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCRespFrameBodyFactory.hpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCFrameToResponseCommandTranslator.cpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCFrameToResponseCommandTranslator.hpp
 )
 
 set(EXTERNAL_LIBRARIES_HDLC

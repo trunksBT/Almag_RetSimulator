@@ -41,9 +41,10 @@ int main()
    ui.setDatabaseCommandsConstraints({
        constraints::database::values.begin(), constraints::database::values.end()});
 
-   hdlcCommunicators.at(0)->receive("5555");  // release mode
+   const auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive("5555");  // release mode
+
    //  here for command interpreter
-   ui.run({});
+//   ui.run({HdlcFrameToResponseCommandTranslator(receivedHdlcFrame).execute()});
 
    LOG(trace) << "END";
    return 0;
