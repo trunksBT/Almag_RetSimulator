@@ -2,7 +2,6 @@
 #include <Controller/Commands/AISGProtocolVersion.hpp>
 #include <Controller/Commands/AddressAssignment.hpp>
 #include <Controller/Commands/Calibrate.hpp>
-#include <Controller/Commands/DummyScan.hpp>
 #include <Controller/Commands/DeviceScan.hpp>
 #include <Controller/Commands/HDLCParameters.hpp>
 #include <Controller/Commands/LinkEstablishment.hpp>
@@ -23,8 +22,8 @@ constexpr uint8_t NUMBER_OF_DUMMY_SCANS_FOR_SINGLE_COMMAND = 1;
 }
 
 RetCommandFactory::RetCommandFactory(std::vector<IHDLCCommunicatorPtr>& hdlcCommunicators)
-        : ICommandFactory()
-        , hdlcCommunicators_{hdlcCommunicators}
+   : ICommandFactory()
+   , hdlcCommunicators_{hdlcCommunicators}
 {
    LOG(trace);
 }
