@@ -79,7 +79,7 @@ INSTANTIATE_TEST_CASE_P(BaseFixtureWithDBAndHDLC,
 //                L7::CALIBRATE + DELIMITER
 //        }
    )
-)
+);
 
 }  // namespace mt
 
