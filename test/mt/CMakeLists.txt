@@ -2,8 +2,15 @@ set(PROJECT_TESTS_NAME Almag_RetSimulator_MT)
 message(${CMAKE_CURRENT_SOURCE_DIR})
 message(status "Almag_RetSimulator mtCMakeLists")
 
+set(MT
+    ${PROJECT_SOURCE_DIR}/test/mt/AlmagControllerTests.cpp
+)
+
+
 add_executable(${PROJECT_TESTS_NAME}
     ${PROJECT_SOURCE_DIR}/test/main.cpp
+    ${MT}
+    ${EXTERNAL_LIBRARIES_UTILS}
 )
 
 add_dependencies(${PROJECT_TESTS_NAME} gmock_main)
