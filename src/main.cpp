@@ -14,7 +14,7 @@
 
 #include <Utils/Logger.hpp>
 #include <Utils/UserCommandParser.hpp>
-#include <TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespCommunicator.hpp>
+#include <MessagingPattern/ZMqReqRespCommunicator.hpp>
 
 using namespace std;
 
@@ -45,11 +45,15 @@ int main()
 
    HDLCFrameToResponseCommandTranslator frameTranslator{};
 
-   const std::string hardcodedPort = "5555";
-   auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive(hardcodedPort);  // release mode
-   auto commandToExecute = frameTranslator.translate(receivedHdlcFrame->getFrameBody());
-   //  here for command interpreter
-   ui.runPredefinedCommands({{commandToExecute, hardcodedPort}});
+
+   while(true)
+   {
+      const std::string hardcodedPort = "5555";
+      auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive(hardcodedPort);  // release mode
+      auto commandToExecute = frameTranslator.translate(receivedHdlcFrame->getFrameBody());
+      //  here for command interpreter
+      ui.runPredefinedCommands({{commandToExecute, hardcodedPort}});
+   }
 
    LOG(trace) << "END";
    return 0;

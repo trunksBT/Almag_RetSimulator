@@ -25,3 +25,6 @@
 [submodule "externalLibraries/TestUtils"]
 	path = externalLibraries/TestUtils
 	url = git@github.com:trunksBT/Almag_TestUtils.git
+[submodule "externalLibraries/MessagingPattern"]
+	path = externalLibraries/MessagingPattern
+	url = git@github.com:trunksBT/Almag_MessagingPattern.git
