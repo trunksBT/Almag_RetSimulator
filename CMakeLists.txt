@@ -104,10 +104,14 @@ set(EXTERNAL_LIBRARIES_MESSAGING_PATTERN
     ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZeroMqUtils.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqCommunicator.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqCommunicator.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubCommunicator.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubCommunicator.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRespCommunicator.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRespCommunicator.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubPrimaryStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubPrimaryStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubSecondaryStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqPubSubSecondaryStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRepPrimaryStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRepPrimaryStrategy.hpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRepSecondaryStrategy.cpp
+    ${PROJECT_SOURCE_DIR}/externalLibraries/MessagingPattern/ZMqReqRepSecondaryStrategy.hpp
 )
 
 set(EXTERNAL_LIBRARIES_UTILS
