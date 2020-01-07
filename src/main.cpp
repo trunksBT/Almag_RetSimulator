@@ -14,7 +14,7 @@
 
 #include <Utils/Logger.hpp>
 #include <Utils/UserCommandParser.hpp>
-#include <MessagingPattern/ZMqReqRespCommunicator.hpp>
+#include <MessagingPattern/ZMqReqRepSecondaryStrategy.hpp>
 
 using namespace std;
 
@@ -27,7 +27,7 @@ int main()
 
    Database db({});
    std::vector<IHDLCCommunicatorPtr> hdlcCommunicators {{
-       std::make_shared<ZMqReqRespCommunicator>(zmq::socket_type::rep),  // release mode
+       std::make_shared<ZMqReqRepSecondaryStrategy>(zmq::socket_type::rep),  // release mode
 //      std::make_shared<HDLCCommunicator>(),  // debug mode
    }};
    ICommandFactoryPtr commandFactory = std::make_shared<RetCommandFactory>(hdlcCommunicators);
@@ -44,11 +44,11 @@ int main()
        constraints::database::values.begin(), constraints::database::values.end()});
 
    HDLCFrameToResponseCommandTranslator frameTranslator{};
-
+   const std::string hardcodedPort = "5555";
+   hdlcCommunicators.at(0)->setupReceive(hardcodedPort);
 
    while(true)
    {
-      const std::string hardcodedPort = "5555";
       auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive(hardcodedPort);  // release mode
       auto commandToExecute = frameTranslator.translate(receivedHdlcFrame->getFrameBody());
       //  here for command interpreter
