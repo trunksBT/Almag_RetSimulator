@@ -38,11 +38,6 @@ INSTANTIATE_TEST_CASE_P(HDLCFrameInterpreterTests,
         ::testing::Values(
         ExpectedFrameType_ExpectedValue_ReceivedString{
                 FrameXID::GET_TYPE,
-                hdlcFrameBodyFactory->get_FrameXID_DummyScan()->build(),
-                retDeviceStr->get_FrameXID_DummyScan()
-        },
-        ExpectedFrameType_ExpectedValue_ReceivedString{
-                FrameXID::GET_TYPE,
                 hdlcFrameBodyFactory->get_FrameXID_DeviceScan()->build(),
                 retDeviceStr->get_FrameXID_DeviceScan()
         },
