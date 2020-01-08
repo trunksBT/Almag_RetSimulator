@@ -19,7 +19,7 @@ FrameStrFactoryPtr retDeviceStr = std::make_shared<SRetHDLCRespFrameBodyStrFacto
 }
 
 class HDLCFrameInterpreterTests:
-        public ::testing::TestWithParam<ExpectedFrameType_ExpectedValue_ReceivedString>
+   public ::testing::TestWithParam<ExpectedFrameType_ExpectedValue_ReceivedString>
 {
 protected:
    HDLCFrameBodyInterpreter frameInterpreter;
