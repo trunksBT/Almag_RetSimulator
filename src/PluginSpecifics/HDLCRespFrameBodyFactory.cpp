@@ -35,7 +35,7 @@ HDLCFrameBodyPtr HDLCRespFrameBodyFactory::get_FrameXID_DeviceScan() const
            .setAddressByte(NO_ADDRESS)
            .setFormatIdentifierByte(FI::ADDR_ASSIGNMENT)
            .setGroupIdentifierByte(GI::ADDRESS_ASSIGNMENT)
-           .setGroupLengthByte(0x15)
+           .setGroupLengthByte(0x12)
            .addParameters(HDLCParametersValues::build(
                    XID_PARAMS_ID::UNIQUE_ID,
                    0x09,

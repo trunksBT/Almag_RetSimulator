@@ -5,6 +5,7 @@ message(status "Almag_RetSimulator utCMakeLists")
 set(UT
     ${PROJECT_SOURCE_DIR}/test/ut/HDLCRespFrameBodyTests.cpp
     ${PROJECT_SOURCE_DIR}/test/ut/HDLCFrameToResponseCommandTranslator.cpp
+    ${PROJECT_SOURCE_DIR}/test/ut/HDLCRespFrameBodyInterpreterTests.cpp
 )
 
 add_executable(${PROJECT_TESTS_NAME}
