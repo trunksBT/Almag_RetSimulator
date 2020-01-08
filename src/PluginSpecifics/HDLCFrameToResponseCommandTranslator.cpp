@@ -24,7 +24,11 @@ std::string HDLCFrameToResponseCommandTranslator::translate(const HDLCFrameBodyP
    LOG(debug);
    const auto receivedStrings = toString(receivedFrame->build());
 
-   if (receivedStrings == knownResponseMessages_->get_FrameXID_DeviceScan())
+   if (receivedStrings == knownResponseMessages_->get_FrameXID_DummyScan())
+   {
+      return L1::DUMMY_SCAN;
+   }
+   else if (receivedStrings == knownResponseMessages_->get_FrameXID_DeviceScan())
    {
       return L2::DEVICE_SCAN;
    }

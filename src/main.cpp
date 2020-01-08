@@ -14,9 +14,11 @@
 
 #include <Utils/Logger.hpp>
 #include <Utils/UserCommandParser.hpp>
+#include <MessagingPattern/ZMqPubSubSecondaryStrategy.hpp>
 #include <MessagingPattern/ZMqReqRepSecondaryStrategy.hpp>
 
 using namespace std;
+using namespace constraints::almag;
 
 int main()
 {
@@ -27,8 +29,8 @@ int main()
 
    Database db({});
    std::vector<IHDLCCommunicatorPtr> hdlcCommunicators {{
-       std::make_shared<ZMqReqRepSecondaryStrategy>(zmq::socket_type::rep),  // release mode
-//      std::make_shared<HDLCCommunicator>(),  // debug mode
+       std::make_shared<ZMqReqRepSecondaryStrategy>(zmq::socket_type::rep),
+       std::make_shared<ZMqPubSubSecondaryStrategy>(zmq::socket_type::sub),
    }};
    ICommandFactoryPtr commandFactory = std::make_shared<RetCommandFactory>(hdlcCommunicators);
    AlmagControllerPtr ctrl = std::make_shared<AlmagController>(db, commandFactory);
@@ -44,15 +46,42 @@ int main()
        constraints::database::values.begin(), constraints::database::values.end()});
 
    HDLCFrameToResponseCommandTranslator frameTranslator{};
-   const std::string hardcodedPort = "5555";
-   hdlcCommunicators.at(0)->setupReceive(hardcodedPort);
+   const std::string PORT_NR_FOR_PUB_SUB{ "6666" };
+   const std::string PORT_NR_FOR_REQ_REP{ "5555" };
+   constexpr unsigned EXPECTED_NUMBER_OF_RECEIVED_DUMMY_SCANS = 6;
+   constexpr unsigned IDX_OF_REQ_REP_COMM_STRATEGY{ 0 };
+   constexpr unsigned IDX_OF_PUB_SUB_COMM_STRATEGY{ 1 };
+   bool isPhysicalLayerEstablished{ false };
+   unsigned receivedDummyScanCounter = 0;
 
-   while(true)
    {
-      auto receivedHdlcFrame = hdlcCommunicators.at(0)->receive(hardcodedPort);  // release mode
-      auto commandToExecute = frameTranslator.translate(receivedHdlcFrame->getFrameBody());
-      //  here for command interpreter
-      ui.runPredefinedCommands({{commandToExecute, hardcodedPort}});
+      hdlcCommunicators.at(IDX_OF_PUB_SUB_COMM_STRATEGY)->setupReceive(PORT_NR_FOR_PUB_SUB);
+      while (not isPhysicalLayerEstablished)
+      {
+         auto receivedHdlcFrame{
+            hdlcCommunicators.at(IDX_OF_PUB_SUB_COMM_STRATEGY)->receive(PORT_NR_FOR_PUB_SUB) };
+         auto commandToExecute{
+            frameTranslator.translate(receivedHdlcFrame->getFrameBody()) };
+         if (L1::DUMMY_SCAN == commandToExecute)
+         {
+            receivedDummyScanCounter++;
+            LOG(debug) << "Received Dummy Scan nr: " << receivedDummyScanCounter;
+         }
+         isPhysicalLayerEstablished |=
+            EXPECTED_NUMBER_OF_RECEIVED_DUMMY_SCANS == receivedDummyScanCounter;
+      }
+      LOG(info) << "Link speed set on 9.6 kbps";
+   }
+   {
+      hdlcCommunicators.at(IDX_OF_REQ_REP_COMM_STRATEGY)->setupReceive(PORT_NR_FOR_REQ_REP);
+      while (true)
+      {
+         auto receivedHdlcFrame{
+            hdlcCommunicators.at(IDX_OF_REQ_REP_COMM_STRATEGY)->receive(PORT_NR_FOR_REQ_REP) };
+         auto commandToExecute{
+            frameTranslator.translate(receivedHdlcFrame->getFrameBody()) };
+         ui.runPredefinedCommands({{commandToExecute, PORT_NR_FOR_REQ_REP}});
+      }
    }
 
    LOG(trace) << "END";

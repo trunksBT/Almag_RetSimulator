@@ -7,6 +7,12 @@ namespace constraints
 {
 namespace almag
 {
+
+namespace L1
+{
+const std::string DUMMY_SCAN = "DummyScan";
+}
+
 namespace L2
 {
 const std::string ADDRESS_ASSIGNMENT = "AddressAssignment";
@@ -22,9 +28,10 @@ namespace L7
 const std::string CALIBRATE = "Calibrate";
 }
 
-constexpr std::size_t NUMBER_OF_CONSTRAINTS = 7;
+constexpr std::size_t NUMBER_OF_CONSTRAINTS = 8;
 
 static const std::array<std::string, NUMBER_OF_CONSTRAINTS> values {{
+    L1::DUMMY_SCAN,
     L2::DEVICE_SCAN,
     L2::ADDRESS_ASSIGNMENT,
     L2::LINK_ESTABLISHMENT,
