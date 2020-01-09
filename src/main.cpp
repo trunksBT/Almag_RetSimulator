@@ -53,7 +53,6 @@ int main()
    constexpr unsigned IDX_OF_PUB_SUB_COMM_STRATEGY{ 1 };
    bool isPhysicalLayerEstablished{ false };
    unsigned receivedDummyScanCounter = 0;
-
    {
       hdlcCommunicators.at(IDX_OF_PUB_SUB_COMM_STRATEGY)->setupReceive(PORT_NR_FOR_PUB_SUB);
       while (not isPhysicalLayerEstablished)
@@ -65,7 +64,6 @@ int main()
          if (L1::DUMMY_SCAN == commandToExecute)
          {
             receivedDummyScanCounter++;
-            LOG(debug) << "Received Dummy Scan nr: " << receivedDummyScanCounter;
          }
          isPhysicalLayerEstablished |=
             EXPECTED_NUMBER_OF_RECEIVED_DUMMY_SCANS == receivedDummyScanCounter;
