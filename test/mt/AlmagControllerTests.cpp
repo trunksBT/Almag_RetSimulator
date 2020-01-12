@@ -36,7 +36,7 @@ TEST_P(AlmagControllerShouldPar, Execute_Command_Expect_ResultCode)
    ctrl_->addCommands(GetParam().inCommands);
    ctrl_->executeCommand();
 
-   ASSERT_THAT(ctrl_->getFinalResultCode(), StrEq(GetParam().expectedHdlcFrame));
+   ASSERT_EQ(ctrl_->getFinalResultCode(), GetParam().expectedHdlcFrame);
 }
 
 INSTANTIATE_TEST_CASE_P(BaseFixtureWithDBAndHDLC,

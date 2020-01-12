@@ -9,7 +9,7 @@ using namespace convert;
 using namespace constraints::almag;
 
 HDLCFrameToResponseCommandTranslator::HDLCFrameToResponseCommandTranslator()
-: knownResponseMessages_{std::make_shared<SRetHDLCReqFrameBodyStrFactory>()}
+   : knownResponseMessages_{std::make_shared<SRetHDLCReqFrameBodyStrFactory>()}
 {
    LOG(trace);
 }

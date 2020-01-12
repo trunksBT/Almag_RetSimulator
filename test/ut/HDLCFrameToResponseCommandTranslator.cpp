@@ -7,7 +7,6 @@
 #include <TestUtils/HDLC/FramesFactories/FrameStrFactory.hpp>
 #include <TestUtils/StructsForParametrizedTests.hpp>
 
-using testing::Eq;
 using namespace constraints::almag;
 
 namespace
@@ -30,7 +29,7 @@ public:
 TEST_P(HDLCFrameToResponseCommandTranslatorTests, BuiltFrame)
 {
    auto recFrame{HDLCFrameBodyInterpreter().apply(GetParam().receivedFrameStr) };
-   ASSERT_THAT(cmdTranslator.translate(recFrame),Eq(GetParam().respCommandStr));
+   ASSERT_EQ(cmdTranslator.translate(recFrame),GetParam().respCommandStr);
 }
 
 INSTANTIATE_TEST_CASE_P(HDLCFrameToResponseCommandTranslatorTests,

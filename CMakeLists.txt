@@ -48,10 +48,7 @@ add_definitions( -DBOOST_ALL_DYN_LINK)
 include_directories(${PROJECT_SOURCE_DIR}/externalLibraries)
 
 set(PLUGIN_SPECIFICS
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/CmdConstraints/AlmagConstraints.hpp
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/CmdConstraints/DatabaseConstraints.hpp
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.cpp
-#    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/UICmdValidators/AlmagCommandValidationManager.hpp
+    ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/CmdConstraints/AlmagConstraints.hpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.cpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/RetCommandFactory.hpp
     ${PROJECT_SOURCE_DIR}/src/PluginSpecifics/HDLCRespFrameBodyFactory.cpp
@@ -120,8 +117,6 @@ set(EXTERNAL_LIBRARIES_UTILS
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/TypeAliases.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Functions.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Functions.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/PrintUtils.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/PrintUtils.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/UserCommandParser.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/UserCommandParser.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/Utils/Logger.cpp
@@ -130,13 +125,7 @@ set(EXTERNAL_LIBRARIES_UTILS
 
 set(EXTERNAL_LIBRARIES_TESTUTILS
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/Hardcodes.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/ObjectTypes.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/StructsForParametrizedTests.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/UniqueKeys.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HexesUtils.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HexesUtils.hpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/MatcherUtils.cpp
-    ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/MatcherUtils.hpp
 )
 
 set(EXTERNAL_LIBRARIES_TESTUTILS_COMMUNICATORS
@@ -144,7 +133,7 @@ set(EXTERNAL_LIBRARIES_TESTUTILS_COMMUNICATORS
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/RoundTripHDLCTestCommunicatorStub.hpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespTestCommunicator.cpp
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/DataLinkLayerCommunicators/ZMqReqRespTestCommunicator.hpp
-    )
+)
 
 set(EXTERNAL_LIBRARIES_TESTUTILS_HDLC_FRAMESFACTORIES
     ${PROJECT_SOURCE_DIR}/externalLibraries/TestUtils/HDLC/FramesFactories/FrameStrFactory.hpp

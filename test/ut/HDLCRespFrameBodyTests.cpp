@@ -7,7 +7,6 @@
 #include <TestUtils/StructsForParametrizedTests.hpp>
 #include <Utils/Functions.hpp>
 
-using testing::Eq;
 using namespace convert;
 
 namespace
@@ -21,7 +20,7 @@ class HDLCRespFrameBodyTests : public ::testing::TestWithParam<BuiltFrameStr_Exp
 
 TEST_P(HDLCRespFrameBodyTests, BuiltFrame)
 {
-   ASSERT_THAT(GetParam().builtFrameStr,Eq(GetParam().expectedFrameStr));
+   ASSERT_EQ(GetParam().builtFrameStr,GetParam().expectedFrameStr);
 }
 
 INSTANTIATE_TEST_CASE_P(HDLCRespFrameBodyTests,
