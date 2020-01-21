@@ -1,8 +1,8 @@
 # This is simulator for AISG 2.0 RetDevice  
 
 # Checkout command  
-- SSH: git clone git@github.com:trunksBT/Almag_RetSimulator.git --recursive  
-- HTTPS: git clone https://github.com/trunksBT/Almag_RetSimulator.git --recursive  
+- SSH: git clone git@github.com:trunksBT/Korytko_RetSimulator.git --recursive  
+- HTTPS: git clone https://github.com/trunksBT/Korytko_RetSimulator.git --recursive  
 
 # UML_ActivityDiagram:  
 1. Install the https://code.visualstudio.com/download  
