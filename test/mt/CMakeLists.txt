@@ -1,9 +1,9 @@
-set(PROJECT_TESTS_NAME Almag_RetSimulator_MT)
+set(PROJECT_TESTS_NAME KorytkoMag_RetSimulator_MT)
 message(${CMAKE_CURRENT_SOURCE_DIR})
-message(status "Almag_RetSimulator mtCMakeLists")
+message(status "KorytkoMag_RetSimulator mtCMakeLists")
 
 set(MT
-    ${PROJECT_SOURCE_DIR}/test/mt/AlmagControllerTests.cpp
+    ${PROJECT_SOURCE_DIR}/test/mt/KorytkoMagControllerTests.cpp
 )
 
 

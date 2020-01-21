@@ -1,12 +1,12 @@
 #include "HDLCFrameToResponseCommandTranslator.hpp"
-#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
+#include <PluginSpecifics/CmdConstraints/KorytkoMagConstraints.hpp>
 #include <Utils/Functions.hpp>
 #include <Utils/Logger.hpp>
 #include <Utils/Utils.hpp>
 #include <TestUtils/HDLC/FramesFactories/SRetHDLCReqFrameBodyStrFactory.hpp>
 
 using namespace convert;
-using namespace constraints::almag;
+using namespace constraints::korytkomag;
 
 HDLCFrameToResponseCommandTranslator::HDLCFrameToResponseCommandTranslator()
    : knownResponseMessages_{std::make_shared<SRetHDLCReqFrameBodyStrFactory>()}

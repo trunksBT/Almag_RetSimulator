@@ -1,13 +1,13 @@
 #include <gmock/gmock.h>
 
-#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
+#include <PluginSpecifics/CmdConstraints/KorytkoMagConstraints.hpp>
 #include <PluginSpecifics/HDLCFrameToResponseCommandTranslator.hpp>
 #include <HDLC/HDLCFrameBodyInterpreter.hpp>
 #include <TestUtils/HDLC/FramesFactories/SRetHDLCReqFrameBodyStrFactory.hpp>
 #include <TestUtils/HDLC/FramesFactories/FrameStrFactory.hpp>
 #include <TestUtils/StructsForParametrizedTests.hpp>
 
-using namespace constraints::almag;
+using namespace constraints::korytkomag;
 
 namespace
 {

@@ -6,11 +6,11 @@
 #include <Controller/Commands/HDLCParameters.hpp>
 #include <Controller/Commands/LinkEstablishment.hpp>
 #include <Controller/Commands/ThreeGPPReleaseID.hpp>
-#include <PluginSpecifics/CmdConstraints/AlmagConstraints.hpp>
+#include <PluginSpecifics/CmdConstraints/KorytkoMagConstraints.hpp>
 #include <PluginSpecifics/HDLCRespFrameBodyFactory.hpp>
 #include <Utils/Logger.hpp>
 
-using namespace constraints::almag;
+using namespace constraints::korytkomag;
 
 namespace
 {

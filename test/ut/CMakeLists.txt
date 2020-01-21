@@ -1,6 +1,6 @@
-set(PROJECT_TESTS_NAME Almag_RetSimulator_UT)
+set(PROJECT_TESTS_NAME KorytkoMag_RetSimulator_UT)
 message(${CMAKE_CURRENT_SOURCE_DIR})
-message(status "Almag_RetSimulator utCMakeLists")
+message(status "KorytkoMag_RetSimulator utCMakeLists")
 
 set(UT
     ${PROJECT_SOURCE_DIR}/test/ut/HDLCRespFrameBodyTests.cpp

@@ -5,7 +5,7 @@
 
 namespace constraints
 {
-namespace almag
+namespace korytkomag
 {
 
 namespace L1

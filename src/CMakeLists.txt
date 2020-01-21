@@ -1,4 +1,4 @@
-message(status "Almag_RetSimulator srcCMakeLists")
+message(status "KorytkoMag_RetSimulator srcCMakeLists")
 
 add_executable(${PROJECT_NAME}
     ${PROJECT_SOURCE_DIR}/src/main.cpp

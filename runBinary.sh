@@ -1,1 +1,1 @@
-make -j4 Almag_RetSimulator && ./src/Almag_RetSimulator
+make -j4 KorytkoMag_RetSimulator && ./src/KorytkoMag_RetSimulator
