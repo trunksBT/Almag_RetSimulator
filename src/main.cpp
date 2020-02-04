@@ -23,7 +23,7 @@ using namespace constraints::korytkomag;
 int main()
 {
    init_logger(IS_LOG_TO_FILE, IS_LOG_ON_STD_OUT,
-       boost::log::trivial::debug);
+       boost::log::trivial::info);
 
    LOG(debug);
 
