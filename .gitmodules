@@ -1,30 +1,30 @@
+[submodule "3rdparty/googletest"]
+	path = 3rdparty/googletest
+	url = https://github.com/google/googletest.git
 [submodule "3rdparty/zeromq"]
 	path = 3rdparty/zeromq
 	url = https://github.com/zeromq/cppzmq.git
 [submodule "externalLibraries/Database"]
 	path = externalLibraries/Database
-	url = git@github.com:trunksBT/KorytkoMag_Database.git
-[submodule "3rdparty/googletest"]
-	path = 3rdparty/googletest
-	url = https://github.com/google/googletest.git
+	url = https://github.com/trunksBT/KorytkoMag_Database.git
 [submodule "externalLibraries/UserInterface"]
 	path = externalLibraries/UserInterface
-	url = git@github.com:trunksBT/KorytkoMag_UserInterface.git
+	url = https://github.com/trunksBT/KorytkoMag_UserInterface.git
 [submodule "externalLibraries/Utils"]
 	path = externalLibraries/Utils
-	url = git@github.com:trunksBT/KorytkoMag_Utils.git
+	url = https://github.com/trunksBT/KorytkoMag_Utils.git
 [submodule "docs/UML_SequenceDiagrams"]
 	path = docs/UML_SequenceDiagrams
-	url = git@github.com:trunksBT/KorytkoMag_RetDriver_Device_Simulator_Docs.git
+	url = https://github.com/trunksBT/KorytkoMag_RetDriver_Device_Simulator_Docs.git
 [submodule "externalLibraries/Controller"]
 	path = externalLibraries/Controller
-	url = git@github.com:trunksBT/KorytkoMag_Controller.git
+	url = https://github.com/trunksBT/KorytkoMag_Controller.git
 [submodule "externalLibraries/HDLC"]
 	path = externalLibraries/HDLC
-	url = git@github.com:trunksBT/KorytkoMag_HDLC.git
+	url = https://github.com/trunksBT/KorytkoMag_HDLC.git
 [submodule "externalLibraries/TestUtils"]
 	path = externalLibraries/TestUtils
-	url = git@github.com:trunksBT/KorytkoMag_TestUtils.git
+	url = https://github.com/trunksBT/KorytkoMag_TestUtils.git
 [submodule "externalLibraries/MessagingPattern"]
 	path = externalLibraries/MessagingPattern
-	url = git@github.com:trunksBT/KorytkoMag_MessagingPattern.git
+	url = https://github.com/trunksBT/KorytkoMag_MessagingPattern.git
