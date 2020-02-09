@@ -13,11 +13,11 @@
 # UML_ClassDiagram:  
 1. WIP  
 
-# Dependencies:
-- cmake 3.12.4
+# Dependencies on Manjaro:
+- sudo pacman --sync cmake // min. 3.12.4
 - g++ 8.2.1 
 - gcc 8.2.1
-- libboost-all-dev 1.71.0
+- sudo pacman --sync boost // min. 1.71.0
 
 # How to run:  
 1.  
